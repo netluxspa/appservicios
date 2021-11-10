@@ -1,0 +1,58 @@
+.contSchedule {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 20px;
+    gap: 10px;
+}
+
+.headerSchedule {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px 25px;
+    position: sticky;
+    z-index: 10000;
+    border-radius: 4px;
+    top: 0;
+   
+    color:white !important;
+    font-weight:bold !important;
+    margin-bottom: 10px;
+    border-bottom: solid 1px rgba(200,200,200,1);
+    border-left: solid 1px rgba(200,200,200,1);
+    border-right: solid 1px rgba(200,200,200,1);
+}
+
+.hour {
+    /* border-bottom: solid 1px rgba(0,0,0,0.4);
+    border-left: solid 1px rgba(0,0,0,0.4);
+    border-right: solid 1px rgba(0,0,0,0.4); */
+    font-size: 0.8em;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+.hour:last-child > div:nth-child(2n){
+    border-bottom: none ;
+    border-left: none ;
+    border-right: none ;
+}
+
+.hour > div:nth-child(2n){
+    border-top: solid 1px rgba(0,0,0,0.4) ;
+    border-right: solid 1px rgba(0,0,0,0.4) ;
+}
+
+.hour > div:nth-child(2n - 1) {
+    position: relative;
+}
+
+.hour > div:nth-child(2n  -1) > span{
+    position: absolute;
+    top: -0.4em;
+    right: 10px;
+    color: rgba(0,0,0,0.89);
+}
